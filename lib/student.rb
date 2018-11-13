@@ -74,6 +74,8 @@ class Student
         FROM students 
         WHERE students.grade = ?
     SQL
+    
+    
   end 
   
   def save

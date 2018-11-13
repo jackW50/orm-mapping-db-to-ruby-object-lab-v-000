@@ -68,7 +68,7 @@ class Student
     self.new_from_db(DB[:conn].execute(sql).first)
   end 
   
-  
+  def self.all_students_in_grade_X(num)
   
   def save
     sql = <<-SQL

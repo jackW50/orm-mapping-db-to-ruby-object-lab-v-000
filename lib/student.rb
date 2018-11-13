@@ -69,6 +69,12 @@ class Student
   end 
   
   def self.all_students_in_grade_X(num)
+    sql =<<-SQL
+        SELECT *
+        FROM students 
+        WHERE students.grade = ?
+    SQL
+  end 
   
   def save
     sql = <<-SQL

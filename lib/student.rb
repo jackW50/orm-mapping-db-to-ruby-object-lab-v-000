@@ -44,7 +44,10 @@ class Student
   
   def self.first_X_students_in_grade_10(num)
     sql =<<-SQL 
-        SELECT 
+        SELECT * 
+        FROM students 
+        ORDER BY(students.id)
+        LIMIT ?
     SQL
   end 
   

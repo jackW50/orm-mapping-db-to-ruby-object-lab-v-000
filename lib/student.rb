@@ -50,6 +50,7 @@ class Student
         ORDER BY(students.id)
         LIMIT ?
     SQL
+    
     DB[:conn].execute(sql, num)
   end 
   
@@ -87,6 +88,7 @@ class Student
 
   def self.drop_table
     sql = "DROP TABLE IF EXISTS students"
+    
     DB[:conn].execute(sql)
   end
 end

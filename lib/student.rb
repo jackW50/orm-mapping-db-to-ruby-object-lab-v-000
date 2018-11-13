@@ -65,7 +65,7 @@ class Student
         ORDER BY(students.id)
     SQL
     
-    DB[:conn].execute(sql).first
+    self.new_from_db(DB[:conn].execute(sql).first)
   end 
   
   def save

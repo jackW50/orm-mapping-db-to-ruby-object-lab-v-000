@@ -26,6 +26,7 @@ class Student
         FROM students
         WHERE students.name = ?
     SQL
+    
     self.new_from_db(DB[:conn].execute(sql, name).flatten)
   end
   
